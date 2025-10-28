@@ -1,6 +1,7 @@
 // components/InstagramMosaicMotion.jsx
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from "framer-motion";
 
 const instagramPhotos = [
   { src: 'https://picsum.photos/id/1011/400/500', span: 'row-span-2 col-span-2' },

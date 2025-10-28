@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaDumbbell, FaHandshake, FaChartLine } from "react-icons/fa";
 
@@ -22,7 +23,7 @@ export default function About() {
         >
           {/* Image du coach */}
           <motion.div
-            className="lg:w-1/3 rounded-3xl overflow-hidden shadow-2xl flex-shrink-0"
+            className="lg:w-1/3 rounded-3xl overflow-hidden shadow-2xl shrink-0"
             variants={itemVariantsLeft}
           >
             <img

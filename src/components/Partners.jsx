@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const logos = [
@@ -13,7 +14,7 @@ const logos = [
 
 export default function Partners() {
   return (
-    <section id="partenaires" className="py-20 text-white" id="partenaires">
+    <section id="partenaires" className="py-20 text-white">
       <div className="container mx-auto px-4 md:px-16">
         {/* Titre */}
         <motion.div

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 export default function SectionDivider({ color = "bg-orange-500", thickness = "h-px", width = "1%", className = "" }) {

@@ -41,7 +41,7 @@ export default function ReviewsCarousel() {
     [
       AutoScroll({
         playOnInit: true, // démarre auto
-        speed: 1,         // vitesse de défilement
+        speed: 0.5,         // vitesse de défilement
         stopOnInteraction: false, // ne stoppe pas au scroll manuel
       }),
     ]

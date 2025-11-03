@@ -89,6 +89,18 @@ export default function Footer() {
           {/* Bas de page */}
           <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 gap-4">
             <p>© {new Date().getFullYear()} AG Coaching — Tous droits réservés.</p>
+            {/* Ligne "Créé par Gabriel Christe" */}
+            <div className="text-xs text-gray-400">
+              Créé par{' '}
+              <a
+                href="https://gabrielchriste.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:underline"
+              >
+                Gabriel Christe
+              </a>
+            </div>
             <div className="flex gap-6">
               <button
                 onClick={() => setLegalOpen(true)}

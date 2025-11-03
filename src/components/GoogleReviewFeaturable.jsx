@@ -113,7 +113,7 @@ export default function ReviewsCarousel() {
           className="text-center mt-12"
         >
           <motion.a
-            href="https://g.page/agcoaching/review"
+            href="https://www.google.com/maps/place/AG+COACHING/@47.7425078,-3.5458359,9z/data=!4m8!3m7!1s0x68db1dc068b452fd:0xfd7a743a9c791dd0!8m2!3d47.7444038!4d-2.8851227!9m1!1b1!16s%2Fg%2F11k3blwqys?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 bg-orange-500 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"

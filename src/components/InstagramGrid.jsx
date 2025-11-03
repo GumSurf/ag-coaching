@@ -1,21 +1,20 @@
 // components/InstagramMosaicMotion.jsx
 import React, { useState } from 'react'
-// eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion'
 
 const instagramPhotos = [
-  { src: 'https://picsum.photos/id/1011/400/500', span: 'row-span-2 col-span-2' },
-  { src: 'https://picsum.photos/id/1021/400/400', span: 'row-span-1 col-span-1' },
-  { src: 'https://picsum.photos/id/1031/400/600', span: 'row-span-2 col-span-1' },
-  { src: 'https://picsum.photos/id/1041/400/400', span: 'row-span-1 col-span-1' },
-  { src: 'https://picsum.photos/id/1051/400/400', span: 'row-span-1 col-span-2' },
-  { src: 'https://picsum.photos/id/1061/400/500', span: 'row-span-2 col-span-1' },
-  { src: 'https://picsum.photos/id/1071/400/400', span: 'row-span-1 col-span-1' },
-  { src: 'https://picsum.photos/id/1081/400/600', span: 'row-span-2 col-span-2' },
-  { src: 'https://picsum.photos/id/1091/400/400', span: 'row-span-1 col-span-1' },
-  { src: 'https://picsum.photos/id/1101/400/400', span: 'row-span-1 col-span-1' },
-  { src: 'https://picsum.photos/id/1111/400/500', span: 'row-span-2 col-span-1' },
-  { src: 'https://picsum.photos/id/1121/400/400', span: 'row-span-1 col-span-1' },
+  { src: '/images/Echauffement.jpg', span: 'md:row-span-2 md:col-span-2' },
+  { src: '/images/Balle.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/BabyFoot.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/Jambe.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/Loin.jpg', span: 'md:row-span-1 md:col-span-2' },
+  { src: '/images/Extension.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/ExerciceAlthere.jpg', span: 'md:row-span-1 md:col-span-1' },
+  { src: '/images/Mur.jpg', span: 'md:row-span-1 md:col-span-1' },
+  { src: '/images/NoirEtBlanc.jpg', span: 'md:row-span-2 md:col-span-2' },
+  { src: '/images/MurBalle.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/USMontagnarde.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/Passe.jpg', span: 'md:row-span-2 md:col-span-4' },
 ]
 
 export default function InstagramMosaicMotion() {
@@ -35,8 +34,13 @@ export default function InstagramMosaicMotion() {
           Suivez nos séances sur Instagram
         </h2>
 
-        {/* Grille mosaïque */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 auto-rows-[150px]">
+        {/* Grille mosaïque responsive */}
+        <div className="
+          grid 
+          grid-cols-1 sm:grid-cols-2 md:grid-cols-4 
+          gap-4 
+          auto-rows-[150px] sm:auto-rows-[180px] md:auto-rows-[200px]
+        ">
           {instagramPhotos.map((photo, i) => (
             <motion.div
               key={i}
@@ -44,8 +48,8 @@ export default function InstagramMosaicMotion() {
               onClick={() => openModal(photo.src)}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              whileHover={{ scale: 1.05, rotate: 1 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              whileHover={{ scale: 1.05 }}
             >
               <img
                 src={photo.src}
@@ -76,7 +80,7 @@ export default function InstagramMosaicMotion() {
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()} // empêche la fermeture si on clique sur l'image
+              onClick={(e) => e.stopPropagation()}
             />
             <button
               className="absolute top-6 right-6 text-white text-3xl font-bold"

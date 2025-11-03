@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaInstagram, FaLinkedin, FaFacebookF, FaArrowUp } from "react-icons/fa";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Footer() {

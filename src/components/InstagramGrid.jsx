@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const instagramPhotos = [
   { src: '/images/Echauffement.jpg', span: 'md:row-span-2 md:col-span-2' },
-  { src: '/images/Balle.jpg', span: 'md:row-span-2 md:col-span-1' },
-  { src: '/images/BabyFoot.jpg', span: 'md:row-span-2 md:col-span-1' },
+  { src: '/images/BabyFoot.jpg', span: 'md:row-span-2 md:col-span-2' },
   { src: '/images/Jambe.jpg', span: 'md:row-span-2 md:col-span-1' },
   { src: '/images/Loin.jpg', span: 'md:row-span-1 md:col-span-2' },
   { src: '/images/Extension.jpg', span: 'md:row-span-2 md:col-span-1' },
@@ -40,7 +39,7 @@ export default function InstagramMosaicMotion() {
           grid 
           grid-cols-1 sm:grid-cols-2 md:grid-cols-4 
           gap-4 
-          auto-rows-[150px] sm:auto-rows-[180px] md:auto-rows-[200px]
+          sm:auto-rows-[180px] md:auto-rows-[200px]
         ">
           {instagramPhotos.map((photo, i) => (
             <motion.div

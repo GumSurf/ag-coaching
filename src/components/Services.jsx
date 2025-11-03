@@ -98,7 +98,7 @@ export default function Services() {
         >
           <motion.a
             href="#contact"
-            className="inline-flex items-center gap-3 text-white bg-orange-500 py-4 px-12 rounded-full font-[Montserrat] font-bold text-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
+            className="inline-flex items-center gap-3 text-white bg-orange-500 py-4 px-12 rounded-lg font-[Montserrat] font-bold text-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -115,7 +115,7 @@ export default function Services() {
         >
           <motion.a
             href="#avis"
-            className="inline-flex items-center gap-2 text-orange-500 bg-gray-800 border border-gray-900 py-2 px-6 rounded-full font-[Montserrat] font-medium text-xs shadow-sm hover:bg-gray-400/20 hover:scale-105 hover:shadow-md transition-all"
+            className="inline-flex items-center gap-2 text-orange-500 bg-gray-800 border border-gray-900 py-2 px-6 rounded-lg font-[Montserrat] font-medium text-xs shadow-sm hover:bg-gray-400/20 hover:scale-105 hover:shadow-md transition-all"
           >
             <FaStar className="text-xs" />
             Voir les avis clients

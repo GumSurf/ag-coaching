@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Bouton retour en haut */}
         <button
           onClick={scrollToTop}
-          className="bg-orange-500 text-white p-4 rounded-full shadow-lg fixed bottom-6 right-6 hover:bg-orange-600 transition-all z-50"
+          className="bg-orange-500 text-white p-4 rounded-lg shadow-lg fixed bottom-6 right-6 hover:bg-orange-600 transition-all z-50"
           aria-label="Retour en haut"
         >
           <FaArrowUp className="text-lg" />

@@ -61,7 +61,7 @@ export default function Hero() {
             href="https://instagram.com/agcoaching56"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center sm:justify-start gap-2 text-white bg-orange-500 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-[Montserrat] font-bold uppercase shadow-2xl mt-4 transition-transform duration-300 hover:scale-110 hover:shadow-orange-400/50"
+            className="inline-flex items-center justify-center sm:justify-start gap-2 text-white bg-orange-500 px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-[Montserrat] font-bold uppercase shadow-2xl mt-4 transition-transform duration-300 hover:scale-110 hover:shadow-orange-400/50"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 1.4 }}

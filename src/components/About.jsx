@@ -82,7 +82,7 @@ export default function About() {
             <motion.div className="mt-8 text-center">
               <motion.a
                 href="#services"
-                className="inline-flex items-center gap-3 text-white bg-orange-500 py-4 px-10 rounded-full font-[Montserrat] font-bold text-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
+                className="inline-flex items-center gap-3 text-white bg-orange-500 py-4 px-10 rounded-lg font-[Montserrat] font-bold text-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}

@@ -82,22 +82,26 @@ export default function Reviews() {
               </motion.div>
             ))}
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <a
+            <motion.a
               href="https://g.page/agcoaching/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-white border-2 border-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+              className="inline-flex items-center space-x-2 bg-white border-2 border-gray-200 text-gray-800 px-6 py-3 rounded-lg shadow hover:scale-105 hover:shadow-lg transition-all duration-300"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
             >
               <FaGoogle className="text-blue-600" />
               <span>Laisser un avis sur Google</span>
-            </a>
+            </motion.a>
           </motion.div>
         </div>
       </div>

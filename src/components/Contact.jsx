@@ -56,7 +56,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="relative max-w-lg w-full bg-gray-800/40 backdrop-blur-md rounded-3xl shadow-2xl p-12 flex flex-col items-center gap-8"
         >
-          <div className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 w-24 h-24 rounded-full flex items-center justify-center shadow-lg">
+          <div className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 w-24 h-24 rounded-lg flex items-center justify-center shadow-lg">
             <FaInstagram className="text-white text-5xl" />
           </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(249,115,22,0.6)" }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 inline-block bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 text-white py-4 px-10 rounded-full font-[Montserrat] font-bold shadow-lg transition-all"
+            className="mt-6 inline-block bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 text-white py-4 px-10 rounded-lg font-[Montserrat] font-bold shadow-lg transition-all"
           >
             Me contacter
           </motion.a>

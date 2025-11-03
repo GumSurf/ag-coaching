@@ -27,7 +27,7 @@ export default function About() {
             variants={itemVariantsLeft}
           >
             <img
-              src="images/mark-farias-dt60oksDTx8-unsplash.jpg"
+              src="images/Coach.jpg"
               alt="Coach sportif"
               className="w-full h-full object-cover"
             />
@@ -55,9 +55,9 @@ export default function About() {
                   <FaGraduationCap className="text-orange-500 text-3xl" /> Diplômes & Certifications
                 </h3>
                 <ul className="space-y-2 text-white/70 text-lg">
-                  <li>BPJEPS AGFF</li>
-                  <li>DEUST AGAPSC</li>
-                  <li>Licence STAPS</li>
+                  <li>Brevet de Moniteur de Football</li>
+                  <li>Licence STAPS filière Entraînement Sportif</li>
+                  <li>Bac ES</li>
                 </ul>
               </motion.div>
 

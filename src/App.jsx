@@ -7,17 +7,10 @@ import Footer from "./components/Footer";
 import GoogleReviewsFeaturable from "./components/GoogleReviewFeaturable";
 import SectionDivider from "./components/SectionDivider";
 import InstagramGrid from "./components/InstagramGrid";
-import SeoHelmet from "./components/SeoHelmet";
 
 function App() {
   return (
     <div className="relative bg-gray-900 text-white min-h-screen">
-      <SeoHelmet
-        title="AgCoaching | Coaching sportif personnalisé à Lorient et Hennebont"
-        description="AgCoaching propose du coaching sportif, préparation physique et accompagnement personnalisé à Lorient et Hennebont. Découvrez nos services et suivez-nous sur Instagram."
-        url="https://www.agcoaching.fr/"
-        image="/images/hero-agcoaching.jpg"
-      />
       {/* Motif fitness SVG en background */}
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none -z2"

@@ -11,8 +11,8 @@ const activities = [
     features: [
       "N1 Handball - HLB",
       "US Montagnarde Football",
-      "Club de Football de Landévan",
-      "AS Calandaise",
+      "Club de Football de Landévant",
+      "AS Calan",
     ],
     highlight: "Expert en performance collective",
   },
@@ -35,7 +35,7 @@ const activities = [
     features: [
       "Fitness Time Hennebont",
       "Calan Gym Fitness",
-      "Stade Landevantais",
+      "Stade Landévantais",
       "Section Gym & Run Aventure",
     ],
     highlight: "Réseau d’installations professionnelles",

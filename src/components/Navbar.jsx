@@ -34,6 +34,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-white/80 font-semibold uppercase tracking-wide">
           <a href="#" className="hover:text-orange-500 transition">Accueil</a>
           <a href="#about" className="hover:text-orange-500 transition">À propos</a>
+          <a href="#services" className="hover:text-orange-500 transition">Services</a>
           <a href="#partenaires" className="hover:text-orange-500 transition">Partenaires</a>
           <a href="#avis" className="hover:text-orange-500 transition">Avis</a>
           <a href="#galleries" className="hover:text-orange-500 transition">Galeries</a>
@@ -73,6 +74,9 @@ export default function Navbar() {
             </a>
             <a href="#about" className="hover:text-orange-500 transition" onClick={() => setIsOpen(false)}>
               À propos
+            </a>
+            <a href="#services" className="hover:text-orange-500 transition" onClick={() => setIsOpen(false)}>
+              Services
             </a>
             <a href="#partenaires" className="hover:text-orange-500 transition" onClick={() => setIsOpen(false)}>
               Partenaires

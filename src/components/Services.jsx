@@ -84,7 +84,7 @@ export default function Services() {
               viewport={{ once: true }}
               className="group relative (--color-background)/5 backdrop-blur-sm border border-white/10 rounded-xl p-10 hover:(--color-background)/10 hover:-translate-y-2 transition-all duration-500"
             >
-              <div className="absolute inset-x-0 -top-px h-[2px] bg-linear-to-r from-transparent via-(--color-primary)] to-transparent opacity-70"></div>
+              <div className="absolute inset-x-0 -top-px h-0.5 bg-linear-to-r from-transparent via-(--color-primary)] to-transparent opacity-70"></div>
 
               <div className="flex flex-col items-start gap-5">
                 <div className="p-4 rounded-xl bg-(--color-primary)]/10 text-(--color-primary)] text-4xl group-hover:scale-110 transition-transform">

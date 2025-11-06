@@ -2,11 +2,16 @@
 
 /* Variables de couleur personnalisées */
 :root {
-  --color-primary: #2563eb;     /* Bleu principal */
-  --color-text: #1f2937;        /* Gris très foncé pour le texte */
-  --color-accent: #3b82f6;      /* Bleu plus clair pour les accents */
-  --color-background: #ffffff;   /* Blanc pour le fond */
-  --color-gray-light: #f3f4f6;  /* Gris clair pour les sections alternées */
+  --color-primary: oklch(70.5% 0.213 47.604);
+  --color-text: #1f2937;
+  --color-accent: #3b82f6;
+  --color-background: #ffffff;
+  --color-gray-light: #f3f4f6;
+  --color-titre: #083eb3;
+  --color-border: #e5e7eb;
+  --rounded-corners: 0.5rem;
+  --hover-scale: 1.05;
+  --color-accent-light: #60a5fa;
 }
 
 @layer base {

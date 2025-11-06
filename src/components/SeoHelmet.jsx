@@ -12,14 +12,12 @@ export default function SeoHelmet({ title, description, url, image }) {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={siteUrl} />
 
-      {/* Open Graph */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={siteUrl} />
       <meta property="og:title" content={title || "AgCoaching"} />
       <meta property="og:description" content={description || "Coaching sportif et préparation physique"} />
       <meta property="og:image" content={siteImage} />
 
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title || "AgCoaching"} />
       <meta name="twitter:description" content={description || "Coaching sportif et préparation physique"} />

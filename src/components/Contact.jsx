@@ -4,19 +4,17 @@ import { FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24">
-
-      {/* Motif fitness SVG en background */}
+    <section
+      id="contact"
+      className="relative py-28 bg-(--color-background) (--color-text) overflow-hidden"
+    >
       <svg
-        className="absolute inset-0 w-full h-full pointer-events-none -z-10"
-        width="100%"
-        height="100%"
+        className="absolute inset-0 w-full h-full opacity-10 pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
           <pattern
-            id="fitnessGrid"
-            x="0"
-            y="0"
+            id="grid"
             width="40"
             height="40"
             patternUnits="userSpaceOnUse"
@@ -24,74 +22,84 @@ export default function Contact() {
             <path
               d="M 40 0 L 0 0 0 40"
               fill="none"
-              stroke="rgba(249,115,22,0.05)"
+              stroke="rgba(255,255,255,0.05)"
               strokeWidth="1"
             />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#fitnessGrid)" />
+        <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
 
-      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center gap-16">
-
-        {/* Titre et description */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl"
+          className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-[Montserrat] font-extrabold text-orange-500 mb-4">
-            Contact
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Parlons de vos <span className="text-(--color-titre)">objectifs</span>
           </h2>
-          <p className="text-xl md:text-2xl text-white/80">
-            Prêt à transformer votre corps et votre vie ? Suivez-moi sur Instagram ou contactez-moi directement par téléphone ou email.
+          <p className="text-lg md:text-xl (--color-text)-300 max-w-2xl mx-auto">
+            Prêt à franchir une nouvelle étape dans votre transformation ?
+            Contactez-moi directement ou suivez-moi sur Instagram.
           </p>
         </motion.div>
 
-        {/* Carte principale - CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative max-w-lg w-full bg-gray-800/40 backdrop-blur-md rounded-3xl shadow-2xl p-12 flex flex-col items-center gap-8"
-        >
-          <div className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 w-24 h-24 rounded-lg flex items-center justify-center shadow-lg">
-            <FaInstagram className="text-white text-5xl" />
-          </div>
-
-          <h3 className="text-3xl font-[Montserrat] font-bold text-white text-center">
-            Suivez-moi sur Instagram
-          </h3>
-          <p className="text-white/70 text-center text-lg md:text-xl">
-            Découvrez mes dernières actualités, conseils sportifs et témoignages de réussite.
-          </p>
-
-          {/* Coordonnées directes */}
-          <div className="flex flex-col gap-4 mt-4 text-white/80 w-full">
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-orange-500" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-6"
+          >
+            <div className="flex items-center gap-4 text-lg">
+              <FaPhoneAlt className="text-[--color-primary] text-2xl" />
               <span className="font-semibold">07 81 58 90 22</span>
             </div>
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-orange-500" />
+            <div className="flex items-center gap-4 text-lg">
+              <FaEnvelope className="text-[--color-primary] text-2xl" />
               <span className="font-semibold">contact@agcoaching56.com</span>
             </div>
-          </div>
 
-          {/* CTA Instagram */}
-          <motion.a
-            href="https://instagram.com/agcoaching56"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(249,115,22,0.6)" }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-6 inline-block bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 text-white py-4 px-10 rounded-lg font-[Montserrat] font-bold shadow-lg transition-all"
+            <motion.a
+              href="https://instagram.com/agcoaching56"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(249,115,22,0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-10 inline-block bg-[--color-primary] hover:(--color-background)-500 transition-all (--color-text) px-10 py-4 rounded-full font-bold text-lg w-fit"
+            >
+              Me contacter sur Instagram
+            </motion.a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative flex justify-center items-center"
           >
-            Me contacter
-          </motion.a>
-        </motion.div>
-
+            <div className="absolute inset-0 bg-linear-to-tr from-[--color-primary]/20 via-pink-500/10 to-transparent blur-3xl rounded-full"></div>
+            <div className="relative z-10 flex flex-col items-center text-center">
+              <div className="w-24 h-24 bg-linear-to-br from-[--color-primary] to-pink-600 flex items-center justify-center rounded-2xl shadow-xl mb-6">
+                <FaInstagram className="(--color-text) text-5xl" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-2">
+                Suivez-moi sur Instagram
+              </h3>
+              <p className="(--color-text)-400 max-w-sm">
+                Découvrez les coulisses des séances, des transformations et
+                conseils pour progresser chaque jour.
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,179 +1,150 @@
 import { useState } from "react";
 import { FaInstagram, FaLinkedin, FaFacebookF, FaArrowUp } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Footer() {
-  const [legalOpen, setLegalOpen] = useState(false);
+  const [showLegal, setShowLegal] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <>
-      <footer className="relative bg-black/90 text-gray-400 overflow-hidden border-t border-white/10">
-        {/* Bouton retour en haut */}
-        <button
-          onClick={scrollToTop}
-          className="bg-orange-500 text-white p-4 rounded-lg shadow-lg fixed bottom-6 right-6 hover:bg-orange-600 transition-all z-50"
-          aria-label="Retour en haut"
-        >
-          <FaArrowUp className="text-lg" />
-        </button>
+    <footer className="relative (--color-background)k (--color-text)-400 border-t border-white/10">
+      <motion.button
+        onClick={scrollToTop}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-6 right-6 z-50 bg-[--color-primary] (--color-text) p-3 rounded-full shadow-lg hover:shadow-[0_0_15px_var(--color-primary)] transition-all"
+        aria-label="Retour en haut"
+      >
+        <FaArrowUp />
+      </motion.button>
 
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid gap-12 md:grid-cols-4">
-            {/* Logo & description */}
-            <div className="md:col-span-2 space-y-4">
-              <div className="flex items-center gap-3">
-                <img
-                  src="/logos/agcoaching-logo.jpg"
-                  alt="Logo AG Coaching"
-                  className="h-12 w-12 object-cover rounded-full"
-                />
-                <h3 className="text-white text-2xl font-bold tracking-wide uppercase">
-                  AG <span className="text-orange-500">Coaching</span>
-                </h3>
-              </div>
-              <p className="text-gray-400 max-w-md leading-relaxed">
-                Le sport pour tous à Hennebont et Lorient. Coaching personnalisé,
-                préparation physique et bien-être.
-              </p>
-            </div>
-
-            {/* Navigation */}
-            <div>
-              <h4 className="text-white font-semibold uppercase mb-4">Navigation</h4>
-              <ul className="space-y-2 font-medium">
-                <li><a href="#" className="hover:text-orange-500 transition">Accueil</a></li>
-                <li><a href="#about" className="hover:text-orange-500 transition">À propos</a></li>
-                <li><a href="#services" className="hover:text-orange-500 transition">Services</a></li>
-                <li><a href="#partenaires" className="hover:text-orange-500 transition">Partenaires</a></li>
-                <li><a href="#contact" className="hover:text-orange-500 transition">Contact</a></li>
-              </ul>
-            </div>
-
-            {/* Réseaux sociaux */}
-            <div>
-              <h4 className="text-white font-semibold uppercase mb-4">Réseaux</h4>
-              <div className="flex flex-col gap-3 font-medium">
-                <a
-                  href="https://instagram.com/agcoaching56"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-orange-500 transition"
-                >
-                  <FaInstagram className="text-lg" /> Instagram
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/adam-gigault-137b82209"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-blue-400 transition"
-                >
-                  <FaLinkedin className="text-lg" /> LinkedIn
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100076831442890"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-blue-600 transition"
-                >
-                  <FaFacebookF className="text-lg" /> Facebook
-                </a>
-              </div>
-            </div>
+      <div className="max-w-7xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-4">
+        <div className="md:col-span-2 space-y-5">
+          <div className="flex items-center gap-3">
+            <img
+              src="/logos/agcoaching-logo.jpg"
+              alt="Logo AG Coaching"
+              className="h-12 w-12 object-cover rounded-md border border-white/10"
+            />
+            <h3 className="(--color-text) text-2xl font-bold tracking-wide uppercase">
+              AG <span className="text-[--color-primary]">Coaching</span>
+            </h3>
           </div>
+          <p className="(--color-text)-400 max-w-md leading-relaxed">
+            Coaching sportif personnalisé à Hennebont et Lorient. 
+            Des séances sur mesure pour dépasser vos limites.
+          </p>
+        </div>
 
-          {/* Bas de page */}
-          <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 gap-4">
-            <p>© {new Date().getFullYear()} AG Coaching — Tous droits réservés.</p>
-            {/* Ligne "Créé par Gabriel Christe" */}
-            <div className="text-xs text-gray-400">
-              Créé par{' '}
-              <a
-                href="https://gabrielchriste.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-500 hover:underline"
-              >
-                Gabriel Christe
-              </a>
-            </div>
-            <div className="flex gap-6">
-              <button
-                onClick={() => setLegalOpen(true)}
-                className="hover:text-orange-500 transition"
-              >
-                Mentions légales
-              </button>
-              <button
-                onClick={() => setLegalOpen(true)}
-                className="hover:text-orange-500 transition"
-              >
-                Politique de confidentialité
-              </button>
-            </div>
+        <div>
+          <h4 className="(--color-text) font-semibold uppercase mb-4 text-sm tracking-wider">
+            Navigation
+          </h4>
+          <ul className="space-y-2">
+            {["Accueil", "À propos", "Services", "Partenaires", "Contact"].map((item) => (
+              <li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-[--color-primary] transition"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="(--color-text) font-semibold uppercase mb-4 text-sm tracking-wider">
+            Suivez-moi
+          </h4>
+          <div className="flex gap-4">
+            <a
+              href="https://instagram.com/agcoaching56"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full (--color-background)/5 hover:bg-[--color-primary] (--color-text) transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/adam-gigault-137b82209"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full (--color-background)/5 hover:bg-blue-500 (--color-text) transition"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100076831442890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full (--color-background)/5 hover:bg-blue-600 (--color-text) transition"
+            >
+              <FaFacebookF />
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
 
-      {/* === Modal Mentions / Confidentialité === */}
-      <AnimatePresence>
-        {legalOpen && (
-          <motion.div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setLegalOpen(false)}
-          >
-            <motion.div
-              className="bg-gray-900 text-gray-200 rounded-2xl max-w-2xl w-full p-8 overflow-y-auto max-h-[80vh]"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
+      <div className="border-t border-white/10 py-6 px-6 text-sm (--color-text)-500">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+          <p>© {new Date().getFullYear()} AG Coaching — Tous droits réservés.</p>
+
+          <div className="flex gap-6 text-xs">
+            <button onClick={() => setShowLegal(true)} className="hover:text-[--color-primary]">
+              Mentions légales
+            </button>
+            <button onClick={() => setShowLegal(true)} className="hover:text-[--color-primary]">
+              Politique de confidentialité
+            </button>
+          </div>
+
+          <div className="text-xs">
+            Créé par{" "}
+            <a
+              href="https://gabrielchriste.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[--color-primary] hover:underline"
             >
-              <h2 className="text-2xl font-bold text-orange-500 mb-4 text-center">
-                Mentions légales & Politique de confidentialité
-              </h2>
+              Gabriel Christe
+            </a>
+          </div>
+        </div>
+      </div>
 
-              <div className="space-y-6 text-sm leading-relaxed">
-                <div>
-                  <h3 className="text-xl font-semibold text-orange-400 mb-2">Mentions légales</h3>
-                  <p><strong>Nom de l’entreprise :</strong> AgCoaching</p>
-                  <p><strong>Activité :</strong> Coaching sportif et accompagnement personnalisé</p>
-                  <p><strong>Adresse :</strong> 28 Rue de Kergreis, 56600 Lanester</p>
-                  <p><strong>Téléphone :</strong> 07 81 58 90 22</p>
-                  <p><strong>Email :</strong> contact@agcoaching.fr</p>
-                  <p><strong>Responsable de publication :</strong> Adam G.</p>
-                  <p><strong>Hébergement :</strong> [Vercel / OVH / Netlify]</p>
-                  <p><strong>SIRET :</strong> [numéro SIRET]</p>
-                </div>
+      <motion.div
+        initial={{ y: "100%" }}
+        animate={{ y: showLegal ? 0 : "100%" }}
+        transition={{ type: "spring", stiffness: 60, damping: 20 }}
+        className="fixed bottom-0 left-0 w-full bg-gray-950 (--color-text)-200 border-t border-white/10 px-8 py-10 z-50 shadow-2xl"
+      >
+        <div className="max-w-3xl mx-auto text-sm leading-relaxed">
+          <h2 className="text-2xl font-bold text-(--color-titre) mb-4 text-center">
+            Mentions légales & Politique de confidentialité
+          </h2>
+          <p>
+            Site édité par <strong>AgCoaching</strong> — 28 Rue de Kergreis,
+            56600 Lanester — contact@agcoaching.fr
+          </p>
+          <p className="mt-3">
+            Ce site ne collecte aucune donnée personnelle et sert uniquement à
+            présenter les prestations de coaching sportif.
+          </p>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-orange-400 mb-2">
-                    Politique de confidentialité
-                  </h3>
-                  <p>
-                    Ce site AgCoaching est uniquement destiné à l’affichage d’informations
-                    sur les services proposés. <strong>Aucune donnée personnelle n’est collectée</strong>.
-                  </p>
-                </div>
-              </div>
-
-              <button
-                onClick={() => setLegalOpen(false)}
-                className="mt-6 w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
-              >
-                Fermer
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+          <button
+            onClick={() => setShowLegal(false)}
+            className="mt-8 block mx-auto bg-[--color-primary] (--color-text) px-8 py-3 rounded-full hover:(--color-background)-600 transition"
+          >
+            Fermer
+          </button>
+        </div>
+      </motion.div>
+    </footer>
   );
 }

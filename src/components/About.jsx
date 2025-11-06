@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-32 bg-linear-to-b from-(--color-background) via-(--color-background) to-(--color-background) text-(--color-texte)"
+      className="relative overflow-hidden py-32 bg-linear-to-b from-(--color-background) via-(--color-background) to-(--color-background) text-(--color-text)"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.07),transparent_60%)] pointer-events-none"></div>
 
@@ -18,8 +18,8 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 bg-linear-to-r from-(--color-titre)] to-(--color-accent) bg-clip-text text-transparent">
-            Ma mission : révéler le meilleur de vous-même
+          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+            MA MISSION : REVELER LE MEILLEUR DE VOUS-MEME
           </h2>
           <p className="text-lg md:text-xl text-(--color-texte)/70 leading-relaxed">
             Chez <span className="text-(--color-primary)] font-semibold">AG Coaching</span>, 
@@ -101,7 +101,7 @@ export default function About() {
                 href="#services"
                 className="relative inline-flex items-center justify-center overflow-hidden rounded-full px-10 py-4 font-semibold text-lg transition-all duration-500 group"
               >
-                <span className="absolute inset-0 bg-linear-to-r from-(--color-primary)] to-(--color-accent) opacity-80 group-hover:opacity-100 transition-opacity duration-500"></span>
+                <span className="absolute inset-0 bg-linear-to-r from-(--color-titre)] to-(--color-accent) opacity-80 group-hover:opacity-100 transition-opacity duration-500"></span>
                 <span className="relative text-white">Découvrir mes services</span>
               </a>
             </motion.div>

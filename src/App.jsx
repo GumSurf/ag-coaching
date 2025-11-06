@@ -12,14 +12,9 @@ function App() {
   return (
     <div className="relative bg-(--color-background) text-(--color-text) min-h-screen">
       
-      {/* Contenu du site */}
       <Hero />
-      <About />
-      <SectionDivider width="25%" />
       <Services />
-      <SectionDivider width="25%" />
       <Partners />
-      <SectionDivider width="25%" />
       <GoogleReviewsFeaturable />
       <SectionDivider width="25%" />
       <InstagramGrid />

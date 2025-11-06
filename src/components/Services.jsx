@@ -12,39 +12,25 @@ import {
 
 const activities = [
   {
-    title: "Préparation Physique Collective",
+    title: "PRÉPARATION PHYSIQUE INDIVIDUELLE",
     icon: <FaFootballBall />,
-    desc: "Optimisez la performance de votre équipe avec des séances sur mesure et un suivi méthodique.",
+    desc: "Je conçois des séances personnalisées visant à améliorer les capacités physiques essentielles à la pratique d'une discipline.",
     features: [
-      "N1 Handball - HLB",
-      "US Montagnarde Football",
-      "Club de Football de Landévant",
-      "AS Calan",
-    ],
-    highlight: "Expert en performance collective",
-  },
-  {
-    title: "Préparation Physique Individuelle",
-    icon: <FaDumbbell />,
-    desc: "Des programmes personnalisés et mesurables pour atteindre vos objectifs physiques.",
-    features: [
-      "Analyse des besoins",
-      "Suivi de progression",
-      "Méthodes adaptées",
-      "Préparation compétition",
-    ],
+      "À partir de 30€ (en salle ou à domicile)"],
     highlight: "Accompagnement individuel sur mesure",
   },
   {
-    title: "Partenariats & Structures",
+    title: "PRÉPARATION PHYSIQUE COLLECTIVE",
+    icon: <FaDumbbell />,
+    desc: "J'accompagne vos équipes pour développer leurs qualités physiques et optimiser leur performance.",
+    features: ["Sur devis"],
+    highlight: "Expert en performance collective",
+  },
+  {
+    title: "SMALL GROUP TRAINING",
     icon: <FaBuilding />,
-    desc: "Collaboration avec des salles, clubs et entreprises pour des projets sportifs durables.",
-    features: [
-      "Fitness Time Hennebont",
-      "Calan Gym Fitness",
-      "Stade Landévantais",
-      "Run Aventure",
-    ],
+    desc: "Des séances ciblées sur une discipline commune : le concept parfait pour booster ta condition ta condition physique et te dépasser grâce à l'énergie du groupe !",
+    features: ["15€/personnes"],
     highlight: "Réseau professionnel actif",
   },
 ];
@@ -53,7 +39,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden py-32 bg-(color-background) (--color-text)"
+      className="relative overflow-hidden py-32 bg-(--color-text) text-(--color-background)"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.08),transparent_60%)]"></div>
 
@@ -65,8 +51,8 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-24"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-(--color-titre)] to-white bg-clip-text text-(--color-titre) mb-6">
-            Mes Services
+          <h2 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-(--color-background)] to-white bg-clip-text text-(--color-background) mb-6">
+            MES SERVICES
           </h2>
           <p className="text-lg md:text-xl (--color-text)/70">
             Coaching individuel, collectif ou professionnel — chaque programme est conçu pour
@@ -82,7 +68,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="group relative (--color-background)/5 backdrop-blur-sm border border-white/10 rounded-xl p-10 hover:(--color-background)/10 hover:-translate-y-2 transition-all duration-500"
+              className="group relative (--color-background)/5 backdrop-blur-sm border border-white/10 p-10 hover:(--color-background)/10 hover:-translate-y-2 transition-all duration-500"
             >
               <div className="absolute inset-x-0 -top-px h-0.5 bg-linear-to-r from-transparent via-(--color-primary)] to-transparent opacity-70"></div>
 
@@ -116,7 +102,6 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -126,13 +111,16 @@ export default function Services() {
         >
           <a
             href="#contact"
-            className="relative inline-flex items-center justify-center px-12 py-4 rounded-full overflow-hidden font-semibold text-lg transition-all duration-500 group"
+            className="relative inline-flex items-center justify-center px-10 py-4 font-semibold text-lg bg-(--color-text) text-(--color-background) transition-all duration-500 group border-1 border-(--color-border)"
           >
-            <span className="absolute inset-0 bg-linear-to-r from-(--color-primary)] to-pink-500 opacity-80 group-hover:opacity-100 transition-opacity"></span>
-            <span className="relative (--color-text)">Démarrer mon accompagnement</span>
+            <span
+              className="absolute inset-0 scale-0 opacity-0 bg-(--color-background) transition-all duration-500 group-hover:scale-100 group-hover:opacity-100"
+            />
+            <span className="relative group-hover:text-(--color-text) z-10">
+              Démarrer mon accompagnement
+            </span>
           </a>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

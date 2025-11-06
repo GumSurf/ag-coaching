@@ -33,7 +33,7 @@ export default function InstagramMosaicMotion() {
     >
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-center text-4xl md:text-5xl font-extrabold tracking-wide mb-14 text-(--color-titre)">
-          Suivez nos séances sur{" "}
+          Suivez les séances sur{" "}
           <span className="text-[--color-primary]">Instagram</span>
         </h2>
 

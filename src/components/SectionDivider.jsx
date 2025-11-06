@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
-export default function SectionDivider({ color = "bg-(--color-primary)", thickness = "h-px", width = "1%", className = "" }) {
+export default function SectionDivider({ color = "bg-(--color-text)", thickness = "h-px", width = "1%", className = "" }) {
   return (
     <motion.div
       className={`mx-auto ${thickness} ${color} ${className}`}

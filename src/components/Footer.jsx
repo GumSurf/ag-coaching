@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaInstagram, FaLinkedin, FaFacebookF, FaArrowUp } from "react-icons/fa";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -11,126 +10,123 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative (--color-background)k (--color-text)-400 border-t border-white/10">
+    <footer className="relative bg-(--color-text) text-(--color-background) border-t border-white/10">
+      {/* Bouton retour en haut */}
       <motion.button
         onClick={scrollToTop}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 bg-[--color-primary] (--color-text) p-3 rounded-full shadow-lg hover:shadow-[0_0_15px_var(--color-primary)] transition-all"
+        className="fixed bottom-6 right-6 z-50 bg-(--color-background) text-(--color-text) p-3 rounded-full shadow-lg hover:bg-(--color-text) hover:text-(--color-background) hover:shadow-[0_0_15px_var(--color-text)] transition-all"
         aria-label="Retour en haut"
       >
         <FaArrowUp />
       </motion.button>
 
-      <div className="max-w-7xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-4">
-        <div className="md:col-span-2 space-y-5">
-          <div className="flex items-center gap-3">
-            <img
-              src="/logos/agcoaching-logo.jpg"
-              alt="Logo AG Coaching"
-              className="h-12 w-12 object-cover rounded-md border border-white/10"
-            />
-            <h3 className="(--color-text) text-2xl font-bold tracking-wide uppercase">
-              AG <span className="text-[--color-primary]">Coaching</span>
-            </h3>
-          </div>
-          <p className="(--color-text)-400 max-w-md leading-relaxed">
-            Coaching sportif personnalisé à Hennebont et Lorient. 
-            Des séances sur mesure pour dépasser vos limites.
+      {/* Contacts et réseaux */}
+      <div className="w-full max-w-7xl mx-auto px-6 pt-12 grid gap-6 md:grid-cols-3 text-center place-items-center">
+        {/* PAR TÉLÉPHONE */}
+        <div className="flex flex-col items-center">
+          <h4 className="text-(--color-background) font-semibold uppercase mb-2 tracking-wider text-xl">
+            Par téléphone
+          </h4>
+          <p className="text-(--color-background)/90 hover:text-[--color-primary] transition font-medium text-lg">
+            <a href="tel:0670578581">06 70 57 85 81</a>
           </p>
         </div>
 
-        <div>
-          <h4 className="(--color-text) font-semibold uppercase mb-4 text-sm tracking-wider">
-            Navigation
+        {/* PAR MAIL */}
+        <div className="flex flex-col items-center">
+          <h4 className="text-(--color-background) font-semibold uppercase mb-2 tracking-wider text-xl">
+            Par mail
           </h4>
-          <ul className="space-y-2">
-            {["Accueil", "À propos", "Services", "Partenaires", "Contact"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="hover:text-[--color-primary] transition"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <p className="text-(--color-background)/90 hover:text-[--color-primary] transition font-medium text-lg">
+            <a href="mailto:agcoaching56@gmail.com">agcoaching56@gmail.com</a>
+          </p>
         </div>
 
-        <div>
-          <h4 className="(--color-text) font-semibold uppercase mb-4 text-sm tracking-wider">
-            Suivez-moi
+        {/* SUR LES RÉSEAUX */}
+        <div className="flex flex-col items-center">
+          <h4 className="text-(--color-background) font-semibold uppercase mb-2 tracking-wider text-xl">
+            Sur les réseaux
           </h4>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center mt-1">
             <a
               href="https://instagram.com/agcoaching56"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full (--color-background)/5 hover:bg-[--color-primary] (--color-text) transition"
+              className="p-3 rounded-full bg-(--color-background)/5 
+             hover:bg-gradient-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] 
+             text-(--color-background) transition-all text-2xl"
             >
               <FaInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/adam-gigault-137b82209"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full (--color-background)/5 hover:bg-blue-500 (--color-text) transition"
-            >
-              <FaLinkedin />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=100076831442890"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full (--color-background)/5 hover:bg-blue-600 (--color-text) transition"
+              className="p-3 rounded-full bg-(--color-background)/5 hover:bg-blue-700 text-(--color-background) transition text-2xl"
             >
               <FaFacebookF />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/adam-gigault-137b82209"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-(--color-background)/5 hover:bg-blue-400 text-(--color-background) transition text-2xl"
+            >
+              <FaLinkedin />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-6 px-6 text-sm (--color-text)-500">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} AG Coaching — Tous droits réservés.</p>
+      <div className="py-6 px-6 text-sm text-(--color-background)/70">
+        <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 min-h-[100px] text-center">
+          {/* Copyright */}
+          <div className="flex-1 text-center">
+            <p>© {new Date().getFullYear()} AG Coaching — Tous droits réservés.</p>
+          </div>
 
-          <div className="flex gap-6 text-xs">
-            <button onClick={() => setShowLegal(true)} className="hover:text-[--color-primary]">
-              Mentions légales
-            </button>
-            <button onClick={() => setShowLegal(true)} className="hover:text-[--color-primary]">
-              Politique de confidentialité
+          {/* Mentions légales */}
+          <div className="flex-1 text-center">
+            <button
+              onClick={() => setShowLegal(true)}
+              className="hover:text-(--color-background)/70 text-xs"
+            >
+              Mentions légales & Politique de confidentialité
             </button>
           </div>
 
-          <div className="text-xs">
+          {/* Créateur */}
+          <div className="flex-1 text-center">
             Créé par{" "}
             <a
               href="https://gabrielchriste.fr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[--color-primary] hover:underline"
+              className="text-(--color-background)/70 hover:underline text-xs"
             >
               Gabriel Christe
             </a>
           </div>
         </div>
+
       </div>
 
+      {/* Modal mentions légales */}
       <motion.div
         initial={{ y: "100%" }}
         animate={{ y: showLegal ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 60, damping: 20 }}
-        className="fixed bottom-0 left-0 w-full bg-gray-950 (--color-text)-200 border-t border-white/10 px-8 py-10 z-50 shadow-2xl"
+        className="fixed bottom-0 left-0 w-full h-1/3 bg-(--color-text) text-(--color-background) border-t border-white/20 px-8 py-10 z-50 shadow-2xl"
       >
         <div className="max-w-3xl mx-auto text-sm leading-relaxed">
-          <h2 className="text-2xl font-bold text-(--color-titre) mb-4 text-center">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Mentions légales & Politique de confidentialité
           </h2>
-          <p>
+          <p className="mb-3">
             Site édité par <strong>AgCoaching</strong> — 28 Rue de Kergreis,
-            56600 Lanester — contact@agcoaching.fr
+            56600 Lanester — <a href="mailto:agcoaching56@gmail.com" className="underline">agcoaching56@gmail.com</a>
           </p>
           <p className="mt-3">
             Ce site ne collecte aucune donnée personnelle et sert uniquement à
@@ -139,7 +135,11 @@ export default function Footer() {
 
           <button
             onClick={() => setShowLegal(false)}
-            className="mt-8 block mx-auto bg-[--color-primary] (--color-text) px-8 py-3 rounded-full hover:(--color-background)-600 transition"
+            className="mt-8 block mx-auto px-8 py-3
+              bg-(--color-text) text-(--color-background)
+              border border-(--color-text)
+              hover:bg-(--color-background) hover:text-(--color-text)
+              transition-all duration-600"
           >
             Fermer
           </button>

@@ -3,15 +3,17 @@
 /* Variables de couleur personnalisées */
 :root {
   --color-primary: oklch(70.5% 0.213 47.604);
-  --color-text: #1f2937;
   --color-accent: #3b82f6;
-  --color-background: #ffffff;
   --color-gray-light: #f3f4f6;
-  --color-titre: #083eb3;
-  --color-border: #e5e7eb;
   --rounded-corners: 0.5rem;
   --hover-scale: 1.05;
-  --color-accent-light: #60a5fa;
+
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-text-secondary: #4a4a4a;
+  --color-border: #e5e5e5;
+  --color-titre: #000000;
+  --color-accent: #ffffff;
 }
 
 @layer base {
@@ -26,3 +28,45 @@
 html {
   scroll-behavior: smooth;
 }
+
+/*
+  COMBO 1 — Luxe & Premium
+font-family:   'Playfair Display', serif;
+font-family:    'Inter', sans-serif;
+*/
+
+/*
+  COMBO 2 — Moderne & Minimaliste
+font-family:   'Poppins', sans-serif;
+font-family:    'Inter', sans-serif;
+*/
+
+/*
+  COMBO 3 — Élégance éditoriale (magazine)
+font-family:   'Cormorant Garamond', serif;
+font-family:    'Work Sans', sans-serif;
+*/
+
+/*
+  COMBO 4 — Coaching / Haut de gamme
+font-family:   'Cinzel', serif;
+font-family:    'Lato', sans-serif;
+*/
+
+/*
+  COMBO 5 — Startup / SaaS / Web3
+font-family:   'Space Grotesk', sans-serif;
+font-family:    'Inter', sans-serif;
+*/
+
+/*
+  COMBO 6 — Bold / Minimal Identity
+font-family:   'Sora', sans-serif;
+font-family:    'Manrope', sans-serif;
+*/
+
+/*
+  COMBO 7 — Friendly & soft
+font-family:   'Quicksand', sans-serif;
+font-family:    'Nunito', sans-serif;
+*/

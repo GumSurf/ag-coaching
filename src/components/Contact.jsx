@@ -16,7 +16,7 @@ export default function Contact() {
           <img
             src="logos/agcoaching-logo.jpg"
             alt="Logo AG Coaching"
-            className="mx-auto mb-6 w-32 h-auto"
+            className="mx-auto mb-6 w-1/2 h-auto"
           />
           <h2 className="text-4xl md:text-4xl font-bold mb-6">
             UN PROJET À PRÉPARER ?

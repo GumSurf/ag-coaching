@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function SeoHelmet({ title, description, image }) {
-  const siteName = "AgCoaching – Coaching personnalisé";
+  const siteName = "AG Coaching – Coaching personnalisé";
   const currentUrl = typeof window !== "undefined" ? window.location.href : "https://www.agcoaching.fr";
 
   const metaTitle = title ? `${title} | AgCoaching` : siteName;

@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="relative bg-(--color-background) text-(--color-text) min-h-screen">
       <SeoHelmet
-        title="AgCoaching – Coaching sportif personnalisé"
-        description="AgCoaching propose du coaching sportif, préparation physique et accompagnement personnalisé à Lorient et Hennebont."
+        title="AG Coaching – Coaching sportif personnalisé"
+        description="AG Coaching propose du coaching sportif, préparation physique et accompagnement personnalisé à Lorient et Hennebont."
         image="/images/Coach.jpg"
       />
 

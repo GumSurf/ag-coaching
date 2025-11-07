@@ -56,7 +56,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-(--color-background)/5 
-             hover:bg-gradient-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] 
+             hover:bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] 
              text-(--color-background) transition-all text-2xl hover:-translate-y-1"
             >
               <FaInstagram />

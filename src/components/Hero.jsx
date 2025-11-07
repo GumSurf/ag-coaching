@@ -12,7 +12,7 @@ export default function Hero() {
       <section className="relative min-h-screen pb-12 lg:pb-0 flex flex-col lg:flex-row bg-(--color-background) overflow-hidden">
 
         {/* IMAGE GAUCHE */}
-        <div className="w-full lg:w-1/2 h-screen flex-shrink-0 relative">
+        <div className="w-full lg:w-1/2 h-screen shrink-0 relative">
           <img
             src="/images/Coach.jpg"
             alt="Coach sportif"

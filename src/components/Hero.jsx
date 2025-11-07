@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <>
       <Navbar />
-      <section className="relative min-h-screen pb-12 md:pb-0 flex flex-col lg:flex-row bg-(--color-background) overflow-hidden">
+      <section className="relative min-h-screen pb-12 lg:pb-0 flex flex-col lg:flex-row bg-(--color-background) overflow-hidden">
 
         {/* IMAGE GAUCHE */}
         <div className="w-full lg:w-1/2 h-screen flex-shrink-0 relative">

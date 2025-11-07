@@ -16,7 +16,6 @@ function App() {
       <Services />
       <Partners />
       <GoogleReviewsFeaturable />
-      <SectionDivider width="25%" />
       <InstagramGrid />
       <SectionDivider width="25%" />
       <Contact />

@@ -56,7 +56,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-(--color-background)/5 
              hover:bg-gradient-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] 
-             text-(--color-background) transition-all text-2xl"
+             text-(--color-background) transition-all text-2xl hover:-translate-y-1"
             >
               <FaInstagram />
             </a>
@@ -64,7 +64,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=100076831442890"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-(--color-background)/5 hover:bg-blue-700 text-(--color-background) transition text-2xl"
+              className="p-3 rounded-full bg-(--color-background)/5 hover:bg-blue-700 text-(--color-background) transition text-2xl hover:-translate-y-1"
             >
               <FaFacebookF />
             </a>
@@ -72,7 +72,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/adam-gigault-137b82209"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-(--color-background)/5 hover:bg-blue-400 text-(--color-background) transition text-2xl"
+              className="p-3 rounded-full bg-(--color-background)/5 hover:bg-blue-400 text-(--color-background) transition text-2xl hover:-translate-y-1"
             >
               <FaLinkedin />
             </a>

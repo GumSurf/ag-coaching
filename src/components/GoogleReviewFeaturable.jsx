@@ -21,20 +21,23 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="avis" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4 text-center">
+    <section id="avis" className="py-24 bg-(--color-text) text-black">
+      <div className="max-w-6xl mx-auto px-4">
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((review, i) => (
             <div
               key={i}
-              className="border border-neutral-300 bg-white p-6 text-left shadow-md"
+              className="border border-white/10 bg-(--color-background) p-6 h-full flex flex-col justify-between
+              transition-all duration-300 ease-out
+              hover:-translate-y-1 hover:shadow-[0px_8px_20px_rgba(255,255,255,0.35)] hover:border-white/40"
             >
-              <p className="font-bold text-black text-lg mb-1">
-                {review.name}
+              <p className="text-sm italic mb-6 leading-relaxed opacity-80">
+                “{review.text}”
               </p>
 
-              <p className="text-black text-sm italic leading-relaxed mb-6">
-                "{review.text}"
+              <p className="font-semibold text-base tracking-tight">
+                {review.name}
               </p>
             </div>
           ))}

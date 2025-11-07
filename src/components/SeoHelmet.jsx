@@ -1,27 +1,35 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default function SeoHelmet({ title, description, url, image }) {
-  const siteUrl = url || "https://www.agcoaching.fr";
-  const siteImage = image ? (image.startsWith("http") ? image : siteUrl + image) : siteUrl + "/default-og.jpg";
+export default function SeoHelmet({ title, description, image }) {
+  const siteName = "AgCoaching – Coaching personnalisé";
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "https://www.agcoaching.fr";
+
+  const metaTitle = title ? `${title} | AgCoaching` : siteName;
+  const metaDescription = description || "Coaching sportif et préparation physique à Lorient et Hennebont.";
+  const metaImage = image
+    ? (image.startsWith("http") ? image : `https://www.agcoaching.fr${image}`)
+    : "https://www.agcoaching.fr/default-og.jpg";
 
   return (
     <Helmet>
-      <title>{title || "AgCoaching – Coaching personnalisé"}</title>
-      <meta name="description" content={description || "Coaching sportif et préparation physique à Lorient et Hennebont"} />
+      <title>{metaTitle}</title>
+      <meta name="description" content={metaDescription} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={siteUrl} />
+      <link rel="canonical" href={currentUrl} />
 
+      {/* Open Graph */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:title" content={title || "AgCoaching"} />
-      <meta property="og:description" content={description || "Coaching sportif et préparation physique"} />
-      <meta property="og:image" content={siteImage} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={metaImage} />
 
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title || "AgCoaching"} />
-      <meta name="twitter:description" content={description || "Coaching sportif et préparation physique"} />
-      <meta name="twitter:image" content={siteImage} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={metaImage} />
     </Helmet>
   );
 }

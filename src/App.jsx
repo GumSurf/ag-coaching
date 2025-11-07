@@ -15,7 +15,7 @@ function App() {
       <SeoHelmet
         title="AgCoaching – Coaching sportif personnalisé"
         description="AgCoaching propose du coaching sportif, préparation physique et accompagnement personnalisé à Lorient et Hennebont."
-        image="/images/hero-agcoaching.jpg"
+        image="/images/Coach.jpg"
       />
 
       <Hero />

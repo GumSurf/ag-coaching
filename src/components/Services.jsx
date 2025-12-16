@@ -55,7 +55,7 @@ export default function Services() {
           </h2>
 
           <p className="text-lg md:text-xl text-(--color-background)/0.7">
-            Coaching individuel, collectif ou professionnel — chaque programme est conçu pour
+            Coaching individuel, collectif ou professionnel <br /> chaque programme est conçu pour
             maximiser votre potentiel.
           </p>
         </motion.div>
@@ -69,15 +69,15 @@ export default function Services() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="group relative bg-(--color-background)/0.05 backdrop-blur border border-white/10 p-10
-                         transition-all duration-500 hover:bg-(--color-background)/0.12
-                         hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,255,255,0.20)]"
-            >
+                         transition-all duration-500 hover:bg-(--color-background)/0.12"
+              >{/*Shadow Blanche hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,255,255,0.20)]*/}
               <div className="absolute inset-x-0 -top-px h-0.5 bg-linear-to-r from-transparent via-(--color-background) to-transparent opacity-70" />
 
               <div className="flex flex-col items-start gap-5">
+                {/*React Icons
                 <div className="p-4 border border-(--color-background) bg-(--color-primary)/0.10 text-(--color-background) text-4xl group-hover:scale-110 transition-transform duration-500">
                   {React.cloneElement(activity.icon, { className: "text-5xl" })}
-                </div>
+                </div>*/}
 
                 <h3 className="text-2xl md:text-3xl font-bold text-(--color-title)">
                   {activity.title}

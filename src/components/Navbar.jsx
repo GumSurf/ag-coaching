@@ -1,5 +1,4 @@
 import { useState } from "react";
-// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
@@ -16,20 +15,14 @@ export default function Navbar() {
   ];
 
   const menuVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
+    hidden: { scale: 0.95, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { duration: 0.35, ease: "easeOut" } },
+    exit: { scale: 0.95, opacity: 0, transition: { duration: 0.25, ease: "easeIn" } },
   };
 
   return (
-    <motion.nav
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-black/5"
-    >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto flex justify-between lg:justify-center items-center px-6 py-3">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <img
@@ -40,38 +33,23 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center font-semibold uppercase tracking-wide">
+        <div className="hidden lg:flex items-center font-semibold uppercase tracking-wide text-white">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="
-                px-6 py-3 relative group
-                text-black
-                transition-all duration-300
-              "
+              className="px-6 py-3 relative group transition-all duration-300"
             >
               {link.name}
-
-              {/* Ligne hover */}
-              <span className="
-                absolute left-0 bottom-0 h-0.5 w-0 bg-black
-                group-hover:w-full transition-all duration-300
-              "></span>
+              <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-white group-hover:w-full transition-all duration-300" />
             </a>
           ))}
 
-          {/* Instagram */}
           <a
             href="https://instagram.com/agcoaching56"
             target="_blank"
             rel="noopener noreferrer"
-            className="
-              ml-4 p-3 rounded-full border border-black/20
-              hover:shadow-[0_0_12px_rgba(0,0,0,0.2)]
-              hover:-translate-y-1 hover:bg-black hover:text-white
-              transition-all duration-300 text-xl flex items-center justify-center
-            "
+            className="ml-4 p-3 rounded-full border border-white/30 text-white text-xl hover:bg-white hover:text-black hover:-translate-y-1 transition-all duration-300 flex items-center justify-center"
           >
             <FaInstagram />
           </a>
@@ -79,7 +57,7 @@ export default function Navbar() {
 
         {/* Mobile Burger */}
         <button
-          className="lg:hidden text-black text-2xl"
+          className="lg:hidden text-white text-2xl z-50"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Ouvrir le menu"
         >
@@ -90,36 +68,55 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            variants={menuVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl flex flex-col items-center font-semibold uppercase tracking-wide space-y-4 py-6 border-t border-gray-200"
-          >
-            {links.map((link) => (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-40"
+              onClick={() => setIsOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 0.25 } }}
+              exit={{ opacity: 0, transition: { duration: 0.2 } }}
+            />
+
+            {/* Centered Drawer */}
+            <motion.div
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="
+                fixed top-full right-0
+                w-11/12 sm:w-7/12
+                bg-black/95 backdrop-blur-xl
+                flex flex-col items-center justify-center
+                space-y-6 py-8 px-6
+                text-white z-50
+              "
+            >
+              {links.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="w-full text-center py-3 rounded-md border border-white/20 hover:bg-white hover:text-black hover:-translate-y-1 transition-all duration-300 text-lg font-semibold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
+
               <a
-                key={link.name}
-                href={link.href}
-                className="w-3/4 text-center py-3 rounded-md border border-gray-200 hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,0,0,0.3)] hover:bg-black hover:text-white transition-all duration-300"
+                href="https://instagram.com/agcoaching56"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center py-3 rounded-md border border-white/20 hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-2 text-lg font-semibold"
                 onClick={() => setIsOpen(false)}
               >
-                {link.name}
+                <FaInstagram /> Instagram
               </a>
-            ))}
-
-            <a
-              href="https://instagram.com/agcoaching56"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-3/4 text-center py-3 rounded-md border border-gray-200 hover:-translate-y-1 hover:shadow-[0_0_12px_rgba(0,0,0,0.3)] hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              onClick={() => setIsOpen(false)}
-            >
-              <FaInstagram /> Instagram
-            </a>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }

@@ -39,8 +39,11 @@ export default function Hero() {
           ))}
 
           <h2 className="text-[clamp(1rem,2.5vw,1.5rem)] text-(--color-text-secondary) max-w-md mt-4">
-            Préparateur sportif à Hennebont et Lorient, je vous accompagne dans votre progression
+            Préparateur physique à Hennebont
           </h2>
+          <h3 className="text-[clamp(1rem,2.5vw,1.5rem)] text-(--color-text-secondary) max-w-md mt-4 italic">
+            je vous accompagne dans votre progression
+          </h3>
 
           {/* CTA */}
           <a

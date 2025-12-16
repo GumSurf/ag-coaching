@@ -54,7 +54,7 @@ export default function InstagramMosaicMotion() {
               <img
                 src={photo.src}
                 alt={`Photo ${i + 1}`}
-                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-[2px]"
               />
               <div className="absolute inset-0 (--color-background)k/0 group-hover:(--color-background)k/40 transition-all duration-500"></div>
               <motion.div
